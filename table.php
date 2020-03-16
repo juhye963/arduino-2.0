@@ -51,10 +51,7 @@ if($next_page >= $total_page){
     $next_page = $total_page;
 }//다음페이지가 총 페이지수보다 크다면 총페이지수 할당
 
-
-
 ?>
-
 
 <html>
 <head>
@@ -62,8 +59,9 @@ if($next_page >= $total_page){
 <meta http-equiv="content-type" content="txt/html" ; charset="utf-8">
 </head>
 <body text-align="center">
+<a href="index.html"><button>HOME</button></a>
 <h1>온도 리스트</h1>
-<h4>총 데이터 수 <?=$total?></h4> 
+<h4>총 데이터 수 : <?=$total?></h4> 
 <table width='500' border='1'>
 <tr>
 <th align='center'>온도</th>
@@ -93,10 +91,12 @@ while($row=$stmh->fetch(PDO::FETCH_ASSOC))
 </tr>
 </table>
 <?php
+print ($prev_page >= 0) ? "<a href='".$_SERVER['PHP_SELF']."?page=$prev_page'>[이전]</a> " : "[이전]";
 for ($p=$s_page; $p<=$e_page; $p++) 
     {
         print ($p != $page) ? "<a style='text-decoration:none' href='".$_SERVER['PHP_SELF']."?page=".$p."'> ".$p." </a></li>\n" : "<b>$p</b> ";   
     }
+print ($next_page<=$total_page) ? "<a href='".$_SERVER['PHP_SELF']."?page=$next_page'>[다음]</a>" : "[다음]";
 ?>
 </body>
 </html>
