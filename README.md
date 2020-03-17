@@ -1,5 +1,5 @@
 
-Arduino Mini Project - 2.0 - 데이터 
+Arduino Mini Project - 2.0 - 데이터 시각화
 ===================
 의도(개발 계기)
 ----------
