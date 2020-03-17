@@ -1,5 +1,5 @@
 
-Arduino Mini Project - 2.0 - 데이터의 활용
+Arduino Mini Project - 2.0 - 데이터 
 ===================
 의도(개발 계기)
 ----------
